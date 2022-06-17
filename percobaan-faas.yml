@@ -1,0 +1,14 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://127.0.0.1:8080
+functions:
+  percobaan-faas:
+    lang: java11
+    handler: ./percobaan-faas
+    image: ridwaanzan/percobaan-faas:latest
+    environment:
+      RAJAONGKIR_URL: https://api.rajaongkir.com/starter
+      RAJAONGKIR_TOKEN: 0736c53c9ca5be5b64886344130cc779
+      REDIS_URL: http://localhost:6379
+
